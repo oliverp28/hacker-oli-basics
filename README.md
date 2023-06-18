@@ -3,19 +3,23 @@ This repository contains many best practices that programmers normally use.     
 
 
 -------- Steps to be secure -------
--->
+  -->
 
 
 
 ------- private VPN connection ---------
--->
+  -->
 
 
 ------- hidden trough the internet ------
--->
+  -->
+
+
+------ Secure server -------
+  -->
 
 
 ------- WIFI Pineapple ------
--->
+  -->
 
 
