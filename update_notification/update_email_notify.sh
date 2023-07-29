@@ -9,9 +9,9 @@ touch /tmp/updates.txt
 
 
 # Schritt 3: E-Mail-Informationen eingeben und in das Skript schreiben
-echo "Bitte geben Sie die Sender-E-Mail-Adresse ein:"
+echo "Bitte geben Sie die Sender-E-Mail-Adresse von Web.de ein:"
 read sender_email
-echo "Bitte geben Sie das Passwort für die Sender-E-Mail-Adresse ein:"
+echo "Bitte geben Sie das Passwort für die Sender-E-Mail-Adresse von Web.de ein:"
 read -s sender_password
 echo "Bitte geben Sie das E-Mail-Subjekt ein:"
 read subject
@@ -31,7 +31,7 @@ sudo mkdir -p /etc/update_email_notify
 sudo mv send_email.py /etc/update_email_notify
 
 # Schritt 6: Test-Email versenden
-$(sudo /usr/bin/apt full-upgrade -y > /tmp/updates.txt && python3 /etc/auto_updates_email/send_email.py)
+$(sudo /usr/bin/apt full-upgrade -y > /tmp/updates.txt && python3 /etc/update_email_notify/send_email.py)
 
 echo "Test-Email ist versendet."
 
@@ -48,7 +48,7 @@ echo "Bitte geben Sie den Wochentag für den Cron-Job ein (0-6 für Sonntag bis 
 read weekday
 
 # Schritt 8: Crontab-Eintrag erstellen
-cron_entry="$minute $hour $day $month $weekday /usr/bin/apt full-upgrade -y > /tmp/updates.txt && python3 /etc/auto_updates_email/send_email.py"
+cron_entry="$minute $hour $day $month $weekday /usr/bin/apt full-upgrade -y > /tmp/updates.txt && python3 /etc/update_email_notify/send_email.py"
 
 # Schritt 9: Crontab bearbeiten und Eintrag hinzufügen
 (sudo crontab -l; echo "$cron_entry") | sudo crontab -
