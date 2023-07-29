@@ -26,10 +26,10 @@ echo "Bitte geben Sie die Empfänger-E-Mail-Adresse ein:"
 read receiver_email
 
 # Skript send_email.py anpassen
-sed -i "s/sender = 'test@web.de'/sender = '$sender_email'/" auto_updates_email/send_email.py
-sed -i "s/password = 'test'/password = '$sender_password'/" auto_updates_email/send_email.py
-sed -i "s/subject = 'Test '/subject = '$subject'/" auto_updates_email/send_email.py
-sed -i "s/receiver = 'test1@web.de'/receiver = '$receiver_email'/" auto_updates_email/send_email.py
+sed -i "s/sender = 'test@web.de'/sender = '$sender_email'/" send_email.py
+sed -i "s/password = 'test'/password = '$sender_password'/" send_email.py
+sed -i "s/subject = 'Test '/subject = '$subject'/" send_email.py
+sed -i "s/receiver = 'test1@web.de'/receiver = '$receiver_email'/" send_email.py
 
 echo "Email-Daten wurden erfolgreich übergeben."
 
