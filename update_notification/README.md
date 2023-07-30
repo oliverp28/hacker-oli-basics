@@ -8,6 +8,7 @@
     Die Funktion der automatischen Updates mit Email-Benachrichtigungen richtet sich an Server
     die rund um die Uhr angeschaltet sind.
 
+
     ----- Funktion -------------
     
     -> automatisierte Updates
@@ -22,6 +23,7 @@
 
     
     ----- Ablauf --------------
+
     
     -> Bash-Skript mit "sudo"-Rechten starten
     -> requirements.txt wird installiert
@@ -33,6 +35,7 @@
     -> die Updates und Emails werden mit einem Root-Cronjob durchgeführt und versendet
     -> Minuten, Stunden, Tage etc. eintragen
     -> Cronjob wird in Crontab eingetragen (nachprüfbar mit: crontab -e)
+
     
     ----- Sonstiges -----------
     -> Benachrichtigungen mit Web.de?
@@ -40,9 +43,12 @@
         - einfache Umsetzung
         - Web.de ist vergleichsweise vertrauenswürdig und verschlüsselt die Emails
         => Andere Email-Dienste als Absender erfordern eine Anpassung der SMTP-Server-Daten
+
         
     -> Warum keine Module wie Pushover oder Pushjet etc.
         - keine gute App-Anbindung an Smartphones
         - keine praktikable Umsetzung möglich
         - keine Garantie für eine Kompatibilität bei zukünftigen IOS- / Android-Versionen
         - keine Sicherheit in der Stabilität der Anwendungen
+
+
