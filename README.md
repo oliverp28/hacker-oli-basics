@@ -33,11 +33,11 @@
     Die Funktion der automatischen Updates mit Email-Benachrichtigungen richtet sich an Server
     die rund um die Uhr angeschaltet sind.
 
-    ----- Funktion -------------
+        -- Funktion --
 
-    -> automatisierte Updates
-    -> Email-Benachrichtigung über Update-Status
-        - pro System kann ein Name gewählt werden
-        - in der Email ist direkt ersichtlich welches System ob und was geupdatet wurde
+        -> automatisierte Updates
+        -> Email-Benachrichtigung über Update-Status
+            - pro System kann ein Name gewählt werden
+            - in der Email ist direkt ersichtlich welches System ob und was geupdatet wurde
 
     ==> Ziel: Übersicht über den Update-Status aller Systeme
