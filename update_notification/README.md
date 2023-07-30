@@ -18,7 +18,7 @@
     ==> Ziel: Übersicht über den Update-Status aller Systeme
 
 
-![Notification 1](Notification1.png) ![Notification 2](Notification2.png)
+![Notification 1](Notification1.PNG) ![Notification 2](Notification2.PNG)
 
     
     ----- Ablauf --------------
