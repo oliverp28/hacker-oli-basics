@@ -23,6 +23,13 @@
     -->
 
 
+    --------- Sammlung relevanter Beitrage im Bereich Cybersecurity ---------
+
+    Das dient als Sammlung relevanter Inhalte zu Linux, Programmierung oder Cybersecurity.
+
+    ==> Ziel: Wissen von verschiedensten Quellen zusammentragen
+
+
     ------- Update_notification ------
 
     Computer, Server etc. bieten dem Nutzer eine Vielzahl von Möglichkeiten. 
