@@ -15,9 +15,11 @@
     laufen alle Internet-Verbindungen über den Server, so sind ist eine
     gewisse Anonymität gewährleistet.
 
+        --- Proxychains ---
 
-    ------- hidden trough the internet ------
-    -->
+      Proxychains ermöglicht eine Verbindung über Proxy-Server und das
+      Tor-Netzwerk. Folglich ist eine Offenlegung der eigenen IP deutlich erschwert.
+
 
 
     ------ Secure server -------
