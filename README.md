@@ -8,7 +8,12 @@
 
 
     ------- private VPN connection ---------
-    -->
+
+    Surfen im Internet erfordert eine Internet-Verbindung mit einer IP-Adresse.
+    Sobald eine Webseite aufgerufen wird, weiß der Webseiten-Betreiber
+    die IP-Adresse des Nutzers mit einem ungefähren Standort. Durch die VPN
+    laufen alle Internet-Verbindungen über den Server, so sind ist eine
+    gewisse Anonymität gewährleistet.
 
 
     ------- hidden trough the internet ------
