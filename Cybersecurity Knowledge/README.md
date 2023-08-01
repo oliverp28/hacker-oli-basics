@@ -11,3 +11,4 @@
     - https://www.youtube.com/@freecodecamp (YouTube: freeCodeCamp.org)
     - https://news.google.com/topics/CAAqIggKIhxDQklTRHpvR2MyVmhjbU5vV2dVS0EwTldSU2dBUAE?hl=de&gl=DE&ceid=DE:de (GoogleNews: aktuelle CVE-Schwachstellen)
     - https://www.youtube.com/@TCMSecurityAcademy (YoutTube: The Cyber Mentor)
+    - https://developers.redhat.com (Redhat cheat sheets)
