@@ -1,4 +1,4 @@
------ Client-Config of Laptop: -----
+----- Client-Config Laptop: -----
 
 [Interface]
 PrivateKey = PrivateKey_Laptop
@@ -9,16 +9,16 @@ MTU = 1460
 [Peer]
 PublicKey = PublicKey_Server
 AllowedIPs = 0.0.0.0/0, ::/0
-Endpoint = IP.OF.YOUR.SERVER:PortofWireguard
+Endpoint = IP.OF.YOUR.SERVER:PortOfWireguard
 PersistentKeepalive = 25
 
 
 
------ Config of Server: -----
+----- Config Server: -----
 
 Address = 15.0.0.1/24
 
 [Peer]
-PublicKey = PunlicKey_Laptop
+PublicKey = PublicKey_Laptop
 AllowedIPs = 15.0.0.0/24
 PersistentKeepalive = 25
