@@ -1,4 +1,4 @@
-    ------ Private VPN Connection -----
+    ------ Private VPN Connection ------
 
     Surfen im Internet erfordert eine Internet-Verbindung mit einer IP-Adresse.
     Sobald eine Webseite aufgerufen wird, weiß der Webseiten-Betreiber
@@ -37,3 +37,47 @@
       - Amazon Web Services (AWS) EC2
       - Google Cloud Compute Engine
       - Linode
+
+
+
+
+      ------------------- Proxychains -------------------
+
+      Proxychains ermöglicht eine Verbindung über Proxy-Server und das
+      Tor-Netzwerk. Folglich ist eine Offenlegung der eigenen IP deutlich erschwert.
+
+      --- Aufbau ---
+
+      - proxychains auf Linux installieren (apt install proxychains -y)
+      - empfohlene Konfigurationsmöglichkeiten:
+      
+          -> dynamic chain
+              Verwendung der Proxyliste in der gegebenen Reihenfolge, 
+              nicht antwortende Server werden übersprungen.
+          -> random chain
+              Zufällige Verwendung der Server innerhalb der Proxyliste.
+              Häufigere Anfragen werden schwerer nachverfolgbar.
+
+      - proxychains starten (proxychains firefox duckduckgo.com)
+
+    ==> Liste mit Proxy-Servern (Socks5): https://spys.one/en/socks-proxy-list/
+
+
+    --- Anmerkung ---
+
+    - je mehr Proxy-Server hintereinander geschalten werden
+      desto langsamer wird die Verbindung
+    - ein höherer Anonymisierungsgrad ist mit Linux Tails (Betriebssystem) möglich
+    - manche Suchmaschinen wie google.de erschweren die Suche mit proxychains
+      (Empfehlung: DuckDuckGo.com)
+    
+
+
+
+
+
+
+
+
+
+      
