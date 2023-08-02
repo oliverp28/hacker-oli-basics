@@ -70,6 +70,7 @@
     - ein höherer Anonymisierungsgrad ist mit Linux Tails (Betriebssystem) möglich
     - manche Suchmaschinen wie google.de erschweren die Suche mit proxychains
       (Empfehlung: DuckDuckGo.com)
+    - Mit proxychains können nmap-scans verdeckt durchgeführt werden
     
 
 
