@@ -31,6 +31,9 @@ pip3 install psycopg2
 # install plocate to use locate command with db
 sudo apt install plocate -y
 
+# install net-tools to use the arp -a command and identify other devices in a network
+sudo apt install net-tools -y
+
 # installing vscode
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
