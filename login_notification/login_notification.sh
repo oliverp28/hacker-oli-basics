@@ -1,5 +1,7 @@
 #!/bin/bash
 
+read -rp "Ist die GeoLite2-City.mmdb Datenbank installiert und im Ordner dieses Skriptes? (Y/n) " confirmation
+
 # Schritt 1: requirements.txt installieren
 pip3 install -r requirements.txt
 
