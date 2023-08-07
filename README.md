@@ -37,6 +37,15 @@
     ==> Ziel: Wissen von verschiedensten Quellen zusammentragen
 
 
+    -------- login_notification --------
+
+    Server die tief in Systeme eingebunden sind müssen adäquat abgesichert sein.
+    Mit einer Anmeldungsbenachrichtigung werden sie immer automatisch über alle
+    Anmeldungen benachrichtigt und sind in der Lage zu reagieren.
+
+    => Ziel: Bei unbefugtem Zugriff informiert zu werden und Maßnahmen treffen zu können.
+
+
     ------- Update_notification ------
 
     Computer, Server etc. bieten dem Nutzer eine Vielzahl von Möglichkeiten. 
