@@ -23,10 +23,38 @@ sed -i "s/receiver = 'test1@web.de'/receiver = '$receiver_email'/" login_notific
 
 echo "Email-Daten wurden erfolgreich übergeben."
 
-# Schritt 4: Dateien in den Profile-Ordner verschieben für die Ausführung beim Login
-sudo mv login_notification.py /etc/profile.d
-sudo mv GeoLite2-City.mmdb /etc/profile.d
+# Schritt 4: Dateien nach /etc/ verschieben
+sudo mv login_notification.py /etc/
+sudo mv GeoLite2-City.mmdb /etc/
 
-echo "Dateien wurde erfolgreich nach /etc/profile.d verlegt."
+echo "Das Python-Skript und die Datenbank wurde erfolgreich nach /etc/ verschoben."
+
+# Schritt 5: Python Befehl zum Auto-Start des Skriptes nach Login in Bashrc-File reinschreiben
+# Pfad zur Python-Datei (relativer Pfad zum Skript)
+
+python_command="python3 /etc/login_notification.py"
+
+# Benutzername
+echo "Bitte geben Sie ihren Benutzernamen ein, damit das Bashrc-File lokalisiert werden kann."
+read username
+
+# Pfad zur .bashrc-Datei im Home-Verzeichnis des Benutzers
+bashrc_file=$(getent passwd "$username" | cut -d: -f6)/.bashrc
+
+# Überprüfen, ob die .bashrc-Datei vorhanden ist
+if [ -f "$bashrc_file" ]; then
+    # Überprüfen, ob der Befehl bereits in der Datei vorhanden ist
+    if ! grep -qF "$python_command" "$bashrc_file"; then
+        # Füge den Befehl ans Ende der .bashrc-Datei hinzu
+        echo "$python_command" >> "$bashrc_file"
+        echo "Befehl wurde zur .bashrc-Datei hinzugefügt."
+    else
+        echo "Befehl ist bereits in der .bashrc-Datei vorhanden."
+    fi
+else
+    echo "Die .bashrc-Datei wurde nicht gefunden."
+fi
+
+echo "Der Befehl python3 /etc/login_notification.py wurde erfolgreich in Bashrc hinzugefügt."
 
 echo "Starte die SSH-Verbindung neu um das Skript zu testen."

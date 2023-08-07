@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import smtplib
 import re
 from email.mime.multipart import MIMEMultipart
@@ -20,7 +22,8 @@ def get_current_username():
     return os.getenv('USER')
 
 def get_current_datetime():
-    return datetime.now()
+    current_datetime = datetime.now()
+    return current_datetime.strftime('%Y-%m-%d %H:%M:%S')
 
 def get_user_ip_address():
     ssh_client = os.getenv('SSH_CLIENT')
@@ -33,12 +36,16 @@ def get_user_ip_address():
     return None
 
 def get_geo_location(ip_address):
-    reader = geoip2.database.Reader('GeoLite2-City.mmdb')  # Pfad zur GeoIP-Datenbank
+    reader = geoip2.database.Reader('/etc/GeoLite2-City.mmdb')  # Pfad zur GeoIP-Datenbank
     try:
         response = reader.city(ip_address)
         city = response.city.name
+        if city == None:
+            city = "Stadt unbekannt"
+
         country = response.country.name
         return f"{city}, {country}"
+
     except geoip2.errors.AddressNotFoundError:
         return "Unbekannter Standort"
 
@@ -50,7 +57,7 @@ location = get_geo_location(user_ip_address)
 
 message = f"Hallo,\n\n" \
           f"Der Benutzer {username} hat sich am {current_datetime} angemeldet.\n" \
-          f"Seine IP-Adresse ist {user_ip_address}, und sein ungefährer Standort ist {location}.\n\n" \
+          f"Seine IP-Adresse ist {user_ip_address}, und sein ungefährer Standort ist: {location}.\n\n" \
           f"Bei unbefugtem Zugriff ergreife sofortige Maßnahmen.\n" \
           f"Viele Grüße,\n" \
           f"Dein Server-Team"
