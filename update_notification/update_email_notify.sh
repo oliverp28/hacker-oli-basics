@@ -48,7 +48,7 @@ echo "Bitte geben Sie den Wochentag für den Cron-Job ein (0-6 für Sonntag bis 
 read weekday
 
 # Schritt 8: Crontab-Eintrag erstellen
-cron_entry="$minute $hour $day $month $weekday /usr/bin/apt full-upgrade -y > /tmp/updates.txt && python3 /etc/update_email_notify/send_email.py"
+cron_entry="$minute $hour $day $month $weekday  /usr/bin/apt update -y && /usr/bin/apt full-upgrade -y > /tmp/updates.txt && python3 /etc/update_email_notify/send_email.py"
 
 # Schritt 9: Crontab bearbeiten und Eintrag hinzufügen
 (sudo crontab -l; echo "$cron_entry") | sudo crontab -
