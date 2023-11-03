@@ -43,7 +43,7 @@
     Mit einer Anmeldungsbenachrichtigung werden sie immer automatisch über alle
     Anmeldungen benachrichtigt und sind in der Lage zu reagieren.
 
-    => Ziel: Bei unbefugtem Zugriff informiert zu werden und Maßnahmen treffen zu können.
+    => Ziel: Bei unbefugtem Zugriff informiert werden und Maßnahmen treffen können.
 
 
     ------- Update_notification ------
