@@ -1,54 +1,43 @@
-    --------- Update_notification ---------
-    
-    Computer, Server etc. bieten dem Nutzer eine Vielzahl von Möglichkeiten. 
-    Damit die Funktionalitäten gewährleistet sind ist die Sicherheit ein elementarer Bestandteil.
-    Regelmäßige Updates bieten eine wichtige Basis der Sicherheit.
-    Darüber hinaus möchte ich als Nutzer darüber informiert sein, ob meine Systeme auf dem
-    aktuellsten Stand sind und ob es Probleme gibt, ohne manuell nachschauen zu müssen.
-    Die Funktion der automatischen Updates mit Email-Benachrichtigungen richtet sich an Server
-    die rund um die Uhr angeschaltet sind.
+# Update_notification
 
+Computers, servers, etc., offer users a variety of functionalities. Security is an essential component to ensure these functionalities. Regular updates provide a crucial foundation for security. Additionally, users want to be informed about the status of their systems, whether they are up-to-date, and if there are any issues, without having to check manually. The function of automatic updates with email notifications is designed for servers that are on around the clock.
 
-    ----- Funktion -------------
-    
-    -> automatisierte Updates
-    -> Email-Benachrichtigung über Update-Status
-        - pro System kann ein Name gewählt werden
-        - in der Email ist direkt ersichtlich welches System ob und was geupdatet wurde
-    
-    ==> Ziel: Übersicht über den Update-Status aller Systeme
+## Functionality
 
+- Automated updates
+- Email notification about the update status
+  - A name can be chosen for each system
+  - The email directly shows which system has been updated and what changes have been made
+
+## Goal
+
+To have an overview of the update status for all systems.
 
 ![Notification](Notification.png)
 
-    
-    ----- Ablauf --------------
+## Workflow
 
-    
-    -> Bash-Skript mit "sudo"-Rechten starten
-    -> requirements.txt wird installiert
-    -> Absender-Email (Web.de) wird in send_email.py eingetragen
-    -> Absender-Email (Web.de) PW wird in send_email.py eingetragen
-    -> Empfänger-Email wird eingetragen
-    -> "full-upgrade -y" wird durchgeführt, in updates.txt geschrieben und in die Email eingelesen 
-    -> Test-Email wird versendet
-    -> die Updates und Emails werden mit einem Root-Cronjob durchgeführt und versendet
-    -> Minuten, Stunden, Tage etc. eintragen
-    -> Cronjob wird in Crontab eingetragen (nachprüfbar mit: crontab -e)
+1. Start the Bash script with "sudo" rights.
+2. Install the requirements from `requirements.txt`.
+3. Enter the sender email (Web.de) in `send_email.py`.
+4. Enter the sender email (Web.de) password in `send_email.py`.
+5. Enter the recipient email.
+6. Execute `full-upgrade -y`, write updates to `updates.txt`, and read them into the email.
+7. Send a test email.
+8. Run the updates and emails with a root cronjob.
+9. Specify minutes, hours, days, etc.
+10. Enter the cronjob in Crontab (check with `crontab -e`).
 
-    
-    ----- Sonstiges -----------
-    -> Benachrichtigungen mit Web.de?
-        - Gute Anbindung mit der Web.de-App für mein Smartphone
-        - einfache Umsetzung
-        - Web.de ist vergleichsweise vertrauenswürdig und verschlüsselt die Emails
-        => Andere Email-Dienste als Absender erfordern eine Anpassung der SMTP-Server-Daten
+## Miscellaneous
 
-        
-    -> Warum keine Module wie Pushover oder Pushjet etc.
-        - keine gute App-Anbindung an Smartphones
-        - keine praktikable Umsetzung möglich
-        - keine Garantie für eine Kompatibilität bei zukünftigen IOS- / Android-Versionen
-        - keine Sicherheit in der Stabilität der Anwendungen
+- Why notifications with Web.de?
+  - Good integration with the Web.de app for my smartphone.
+  - Simple implementation.
+  - Web.de is relatively trustworthy and encrypts emails.
+  - Other email services as senders require adjustment of the SMTP server data.
 
-
+- Why not use modules like Pushover or Pushjet, etc.?
+  - Poor app integration with smartphones.
+  - Impractical implementation.
+  - No guarantee of compatibility with future IOS/Android versions.
+  - No stability assurance for the applications.
