@@ -1,84 +1,61 @@
-    ------ Private VPN Connection ------
+# Private VPN Connection
 
-    Surfen im Internet erfordert eine Internet-Verbindung mit einer IP-Adresse.
-    Sobald eine Webseite aufgerufen wird, weiß der Webseiten-Betreiber
-    die IP-Adresse des Nutzers mit einem ungefähren Standort. Durch die VPN
-    laufen alle Internet-Verbindungen über den Server, so sind ist eine
-    gewisse Anonymität gewährleistet.
+Surfing the internet requires an internet connection with an IP address. When a website is accessed, the website operator knows the user's IP address and an approximate location. Through a VPN, all internet connections are routed through the server, ensuring a certain level of anonymity.
 
-    ---- Aufbau ----
+## Structure
 
-    - Verbindung zwischen dem Client und dem Server über Wireguard
-    - Jede Verbindung ins Internet wird über den Server geleitet
-    - Der Server selbst kommuniziert und leitet alle Antworten an den Client zurück
+- Connection between the client and the server via Wireguard
+- Every internet connection is routed through the server
+- The server communicates and forwards all responses back to the client
 
-    --> Vorteile:
-        - IP-Adresse ist die des Servers
-        - Keine Webseite kann Anfragen einem bestimmten Gerät zuordnen
-        - Wireguard-App auf Mac, iPad, iPhone etc.
-        - Alle Verbindungen zwischen Client und Server sind verschlüsselt
-        - keine Limitierung der Geschwindigkeit zum Surfen
-        - In fremden Wlan ist der Datenverkehr anonymisiert
-          (Router sieht lediglich die Kommunikation mit deinem Server)
+### Advantages
 
-    --> Nachteile:
-        - Manche Webseiten erlauben kein Zugriff über "nicht-private IP-Adressen"
-        - Server erfordert eine angemessene Absicherung (siehe Secure Server)
-        
+- IP address is that of the server
+- No website can trace requests to a specific device
+- Wireguard app available on Mac, iPad, iPhone, etc.
+- All connections between the client and server are encrypted
+- No speed limitations for browsing
+- Traffic is anonymized in foreign Wi-Fi (router only sees communication with your server)
 
-    ---- Sonstiges ----
+### Disadvantages
 
-    - Einrichtung von VPN-Wireguard ist im Home-VPN-with-DS-Lite-Repository beschrieben
-    
-    - Empfehlung von Server-Anbietern:
-      - Heztner-Cloud (preiswert, sicher, gebunden an deutsche Gesetze)
+- Some websites do not allow access via "non-private IP addresses"
+- Server requires appropriate security measures (see Secure Server)
 
-    - Weitere Server-Anbieter:
-      - Amazon Web Services (AWS) EC2
-      - Google Cloud Compute Engine
-      - Linode
+## Additional Information
 
+- Setup of VPN-Wireguard is described in the Home-VPN-with-DS-Lite repository.
+  
+- Recommended server providers:
+  - Hetzner Cloud (cost-effective, secure, bound by German laws)
 
+- Other server providers:
+  - Amazon Web Services (AWS) EC2
+  - Google Cloud Compute Engine
+  - Linode
 
+## Proxychains
 
-      ------------------- Proxychains -------------------
+### Overview
 
-      Proxychains ermöglicht eine Verbindung über Proxy-Server und das
-      Tor-Netzwerk. Folglich ist eine Offenlegung der eigenen IP deutlich erschwert.
+Proxychains allows a connection through proxy servers and the Tor network, making the exposure of the user's IP address significantly more difficult.
 
-      --- Aufbau ---
+### Structure
 
-      - proxychains auf Linux installieren (apt install proxychains -y)
-      - empfohlene Konfigurationsmöglichkeiten:
-      
-          -> dynamic chain
-              Verwendung der Proxyliste in der gegebenen Reihenfolge, 
-              nicht antwortende Server werden übersprungen.
-          -> random chain
-              Zufällige Verwendung der Server innerhalb der Proxyliste.
-              Häufigere Anfragen werden schwerer nachverfolgbar.
+- Install proxychains on Linux (`apt install proxychains -y`)
+- Recommended configuration options:
+  - Dynamic chain: Use the proxy list in the given order, skipping unresponsive servers.
+  - Random chain: Random use of servers within the proxy list, making frequent requests harder to trace.
 
-      - proxychains starten (proxychains firefox duckduckgo.com)
+- Start proxychains (`proxychains firefox duckduckgo.com`)
 
-    ==> Liste mit Proxy-Servern (Socks5): https://spys.one/en/socks-proxy-list/
+### Proxy Server List (Socks5)
 
+[List of Proxy Servers](https://spys.one/en/socks-proxy-list/)
 
-    --- Anmerkung ---
+### Notes
 
-    - je mehr Proxy-Server hintereinander geschalten werden
-      desto langsamer wird die Verbindung
-    - ein höherer Anonymisierungsgrad ist mit Linux Tails (Betriebssystem) möglich
-    - manche Suchmaschinen wie google.de erschweren die Suche mit proxychains
-      (Empfehlung: DuckDuckGo.com)
-    - Mit proxychains können nmap-scans verdeckt durchgeführt werden
-    
-
-
-
-
-
-
-
-
-
-      
+- Increasing the number of proxy servers in sequence results in slower connections.
+- Higher anonymity is achievable with Linux Tails (operating system).
+- Some search engines like google.de complicate searches with proxychains (Recommendation: DuckDuckGo.com).
+- Proxychains can be used to conduct nmap scans covertly.
