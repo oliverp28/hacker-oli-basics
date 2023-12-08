@@ -1,66 +1,48 @@
-    # hacker_oli_basics
-    This repository contains many best practices that programmers normally use.       --mentored by Tony K.--
+# hacker_oli_basics
 
+Welcome to the **hacker_oli_basics** repository, a collection of best practices commonly employed by programmers, mentored by Tony K.
 
-    -------- Steps to be secure -------
-    -->
+## Steps to be Secure
 
+### Private VPN Connection
 
+Browsing the internet requires an internet connection with an IP address. When a website is accessed, the website operator gains knowledge of the user's IP address and approximate location. A Virtual Private Network (VPN) routes all internet connections through its server, ensuring a degree of anonymity.
 
-    ------- private VPN connection ---------
+#### Proxychains
 
-    Surfen im Internet erfordert eine Internet-Verbindung mit einer IP-Adresse.
-    Sobald eine Webseite aufgerufen wird, weiß der Webseiten-Betreiber
-    die IP-Adresse des Nutzers mit einem ungefähren Standort. Durch die VPN
-    laufen alle Internet-Verbindungen über den Server, so sind ist eine
-    gewisse Anonymität gewährleistet.
+Proxychains facilitates connections through proxy servers and the Tor network, making it significantly more challenging to disclose one's own IP.
 
-        --- Proxychains ---
+## Secure Server
 
-      Proxychains ermöglicht eine Verbindung über Proxy-Server und das
-      Tor-Netzwerk. Folglich ist eine Offenlegung der eigenen IP deutlich erschwert.
+*Details on securing servers to be added.*
 
+## WIFI Pineapple
 
+*Information on WIFI Pineapple to be added.*
 
-    ------ Secure server -------
-    -->
+## Collection of Relevant Cybersecurity Resources
 
+This section serves as a compilation of valuable content related to Linux, programming, and cybersecurity.
 
-    ------- WIFI Pineapple ------
-    -->
+**Objective:** Aggregate knowledge from various sources.
 
+## login_notification
 
-    --------- Sammlung relevanter Beitrage im Bereich Cybersecurity ---------
+Servers deeply integrated into systems must be adequately secured. Login notifications automatically inform administrators of all logins, enabling timely responses.
 
-    Das dient als Sammlung relevanter Inhalte zu Linux, Programmierung oder Cybersecurity.
+**Objective:** Receive alerts of unauthorized access and take appropriate measures.
 
-    ==> Ziel: Wissen von verschiedensten Quellen zusammentragen
+## Update_notification
 
+Computers, servers, and similar systems offer users a multitude of capabilities. Security is a fundamental aspect to ensure their functionality. Regular updates provide a crucial foundation for security. Additionally, users want to be informed about the status of their systems and any issues without manual checks. The automated update feature with email notifications is designed for servers that are operational 24/7.
 
-    -------- login_notification --------
+### Functionality
 
-    Server die tief in Systeme eingebunden sind müssen adäquat abgesichert sein.
-    Mit einer Anmeldungsbenachrichtigung werden sie immer automatisch über alle
-    Anmeldungen benachrichtigt und sind in der Lage zu reagieren.
+- Automated updates
+- Email notification of update status
+  - Each system can be assigned a name
+  - The email clearly indicates which system was updated and what changes were made
 
-    => Ziel: Bei unbefugtem Zugriff informiert werden und Maßnahmen treffen können.
+**Objective:** Maintain an overview of the update status for all systems.
 
-
-    ------- Update_notification ------
-
-    Computer, Server etc. bieten dem Nutzer eine Vielzahl von Möglichkeiten. 
-    Damit die Funktionalitäten gewährleistet sind ist die Sicherheit ein elementarer Bestandteil.
-    Regelmäßige Updates bieten eine wichtige Basis der Sicherheit.
-    Darüber hinaus möchte ich als Nutzer darüber informiert sein, ob meine Systeme auf dem
-    aktuellsten Stand sind und ob es Probleme gibt, ohne manuell nachschauen zu müssen.
-    Die Funktion der automatischen Updates mit Email-Benachrichtigungen richtet sich an Server
-    die rund um die Uhr angeschaltet sind.
-
-        -- Funktion --
-
-        -> automatisierte Updates
-        -> Email-Benachrichtigung über Update-Status
-            - pro System kann ein Name gewählt werden
-            - in der Email ist direkt ersichtlich welches System ob und was geupdatet wurde
-
-    ==> Ziel: Übersicht über den Update-Status aller Systeme
+Feel free to explore and contribute to enhance the security practices shared in this repository.
