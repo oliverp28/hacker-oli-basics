@@ -1,36 +1,35 @@
-    -------- login_notification --------
+# login_notification
 
-    Server die tief in Systeme eingebunden sind müssen adäquat abgesichert sein.
-    Mit einer Anmeldungsbenachrichtigung werden sie immer automatisch über alle
-    Anmeldungen benachrichtigt und sind in der Lage zu reagieren.
+Servers deeply integrated into systems must be adequately secured. With a login notification, administrators are automatically informed about all logins and can take appropriate measures.
 
-    => Ziel: Bei unbefugtem Zugriff informiert zu werden und Maßnahmen treffen zu können.
+## Goal
 
-    ---- Aufbau ----
-    
-    -> Das Python-Skript schickt eine automatisch generierte Email an Nutzer
-    -> Inhalt:  
-          - angemeldeter User
-          - Datum + Uhrzeit
-          - IP-Adresse des Clients der SSH-Verbindung
-          - Standort der IP-Adresse (Stadt, Land)
+To be notified of unauthorized access and be able to respond.
 
+## Structure
 
-    ---- Installation ----
-    
-    -> Übertragung der Datenbank für die Ortung der IP-Adresse
-        -> Download der kostenlosen GeoLite2-City-Datenbank
-        -> Link: https://www.maxmind.com/en/account/login (Account erstellen und herunterladen)
-        -> Falls Verbindung nur per SSH zum konfigurierenden Server möglich ist:
-            sftp (falls anderer SSH-Port: -P 1234) SSH-Server@12.34.56.78
-            put /Pfad/zur/DB /Pfad/der/neuen/DB
-            exit
-    
-    -> DB in den Ordner von login_notification.sh verschieben
-    -> Bash-Skript ausführen
+- The Python script sends an automatically generated email to the user.
+- Content:
+  - Logged-in user
+  - Date + time
+  - IP address of the client initiating the SSH connection
+  - Location of the IP address (City, Country)
 
+## Installation
 
-    ---- Sonstiges ----
-    -> Funktionsweise nur bei WEB.de-Emails als Absender gewährleistet
-    -> Dateirechte mit chmod 711 empfohlen da Passwörter im Klartext enthalten sind
-    
+### Transfer of the IP address location database
+
+1. Download the free GeoLite2-City database from [MaxMind](https://www.maxmind.com/en/account/login) (create an account and download).
+2. If the connection to the configuring server is only possible via SSH:
+    ```bash
+    sftp (if using a different SSH port: -P 1234) SSH-Server@12.34.56.78
+    put /Path/to/DB /Path/of/new/DB
+    exit
+    ```
+3. Move the database into the folder of `login_notification.sh`.
+4. Execute the Bash script.
+
+## Miscellaneous
+
+- Functionality is guaranteed only with WEB.de emails as the sender.
+- Recommended file permissions: `chmod 711` because passwords are included in plaintext.
