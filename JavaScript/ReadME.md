@@ -1,4 +1,4 @@
-# README - Web Development Projects
+# Web Development Projects
 
 ## Overview
 
