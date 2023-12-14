@@ -1,4 +1,4 @@
-# Read.ME - Stratton Oakmont Documentation
+#Stratton Oakmont Documentation
 
 ## Overview
 
