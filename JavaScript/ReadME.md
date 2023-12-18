@@ -28,6 +28,9 @@ This project focuses on creating a website that communicates with an API, dynami
 
 This project documents a course on JavaScript, providing comprehensive commentary on the fundamental functions of JavaScript. The purpose is to serve as a learning resource for individuals seeking to understand the basics of JavaScript.
 
+JavaScript Course - Full Course for Beginners (freeCodeCamp.org)
+Url:https://www.youtube.com/watch?v=PkZNo7MFNFg (date_url: 12/04/2023) 
+
 #### Content:
 
 The documentation covers the following fundamental JavaScript concepts:
